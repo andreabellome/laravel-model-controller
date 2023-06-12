@@ -7,34 +7,30 @@ Laravel Comics | Movies
 @section('content')
 
 <!-- start: print the movies -->
-
-
-<div class="debug width-80 just-cont-evenly flex flex-dir-row margin-auto flex-wrap">
+<div class=" width-80 just-cont-evenly flex flex-dir-row margin-auto flex-wrap">
     @foreach( $movies as $elem )
     <div class="card mb-3 mr-5" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">
+            <h5 class="card-title  text-center">
                 {{ $elem['title'] }}
             </h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h6 class="card-subtitle mb-2 text-muted  text-center">
+                Date: {{ $elem['date'] }}</h6>
+            <p class="card-text text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi excepturi suscipit in voluptatibus? Hic
+                veniam eos voluptas vitae ex quas quibusdam nemo, omnis corrupti? Rerum minima fugiat voluptates sit
+                quae.
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted  text-center">
+                Original title: {{ $elem['original_title'] }}
+            </h6>
+            <p class=" text-center">
+                Vote: {{ $elem['vote'] }}
+            </p>
         </div>
     </div>
     @endforeach
 </div>
-
-
-
-<!-- <div class="debug">
-
-    {{ $elem['title'] }}
-
-</div> -->
-
-
 <!-- end: print movies -->
 
 @endsection
